@@ -19,4 +19,14 @@ jobs:
           go-version: 1.17
 
       - name: Build Project
-        run: go build -o ./dist/hodorr ./main.go
+        run: go build ./main.go
+        
+      - name: Upload Artifacts
+
+        uses: actions/upload-artifact@v3
+
+        with: 
+
+            name: hodor
+
+            path: "./dist"
