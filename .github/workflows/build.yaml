@@ -19,7 +19,7 @@ jobs:
           go-version: 1.17
 
       - name: Build Project
-        run: go build ./main.go dor
+        run: go build ./main.go
       - name: Publish artifacts
         uses: actions/upload-artifact@v3
         with:
