@@ -22,7 +22,7 @@ jobs:
         run: mkdir dist2 && echo "Directory created"
 
       - name: Build Project
-        run: go build -o dist2/hodor.exe ./main.go && ls dist2
+        run: go build -o dist2/hodor ./main.go && ls dist2
         
       - name: Upload Artifacts
 
@@ -30,7 +30,7 @@ jobs:
 
         with: 
             name: hodor
-            path: "dist/hodor"
+            path: "dist2/hodor"
 
       - name: Show directory listing
         run: ls -l dist
