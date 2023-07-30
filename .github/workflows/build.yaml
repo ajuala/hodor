@@ -18,24 +18,26 @@ jobs:
         with:
           go-version: 1.17
 
+      - name: Create output directory
+        run: mkdir dist && echo "Directory created"
+
       - name: Build Project
-        run: go build -o hodor ./main.go
+        run: go build -o dist/hodor ./main.go && ls -l dist
         
-      - name: Upload Artifacts
+      # - name: Upload Artifacts
 
-        uses: actions/upload-artifact@v3
+      #   uses: actions/upload-artifact@v3
 
-        with: 
+      #   with: 
+      #       name: hodor
+      #       path: "dist/hodor"
 
-            name: hodor
+      # - name: Show directory listing
+      #   run: ls -l dist
 
-            path: "**/dist/hodor"
+
+      # - name: Download artifact
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: hodor
             
-  # Download:
-      # runs-on: ubuntu-latest
-      # needs: Build
-      # steps:
-      - name: download
-        uses: actions/download-artifact@v3
-        with:
-            name: hodor
