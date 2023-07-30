@@ -31,11 +31,11 @@ jobs:
 
             path: "**/dist/hodor"
             
-  Download:
-      runs-on: ubuntu-latest
-      needs: Build
-      steps:
-          - name: download
-            uses: actions/download-artifact@v3
-            with:
-                name: hodor
+  # Download:
+      # runs-on: ubuntu-latest
+      # needs: Build
+      # steps:
+      - name: download
+        uses: actions/download-artifact@v3
+        with:
+            name: hodor
