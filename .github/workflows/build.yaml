@@ -19,10 +19,10 @@ jobs:
           go-version: 1.17
 
       - name: Create output directory
-        run: mkdir dist && echo "Directory created"
+        run: mkdir dist2 && echo "Directory created"
 
       - name: Build Project
-        run: go build -o dist/hodor ./main.go && ls -l dist
+        run: go build -o dist2/hodor ./main.go && ls -l dist2
         
       # - name: Upload Artifacts
 
