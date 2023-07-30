@@ -24,16 +24,16 @@ jobs:
       - name: Build Project
         run: go build -o dist2/hodor.exe ./main.go && ls dist2
         
-      # - name: Upload Artifacts
+      - name: Upload Artifacts
 
-      #   uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
 
-      #   with: 
-      #       name: hodor
-      #       path: "dist/hodor"
+        with: 
+            name: hodor
+            path: "dist/hodor"
 
-      # - name: Show directory listing
-      #   run: ls -l dist
+      - name: Show directory listing
+        run: ls -l dist
 
 
       # - name: Download artifact
