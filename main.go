@@ -5,5 +5,5 @@ import (
 )
 
 func main(){
-    fmt.Println("Hodor! Hodor!! Hodor!!!")
+    fmt.Println("Hodor says \"Hodor!\"")
 }
