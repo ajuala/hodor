@@ -36,6 +36,6 @@ jobs:
       needs: Build
       steps:
           - name: download
-            uses: actions/download-atefact@v3
+            uses: actions/download-artefact@v3
             with:
                 name: hodor
